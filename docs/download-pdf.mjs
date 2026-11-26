@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { writeFile } from 'node:fs/promises';
 
 const site = new URL('https://bfmave.github.io/shared-documents/');
+const encryptedDocument = 'https://raw.githubusercontent.com/BFMAVE/shared-documents/main/docs/document.bin';
 const nonceLength = 12;
 const [argument, output = 'document.pdf', ...extra] = process.argv.slice(2);
 
@@ -19,7 +20,7 @@ try {
     throw new Error('Provide the full sharing link, including the part after #.');
   }
 
-  const response = await fetch(new URL('document.bin', site), {
+  const response = await fetch(encryptedDocument, {
     redirect: 'error',
     signal: AbortSignal.timeout(30000),
   });
