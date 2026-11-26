@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+body {
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 32rem);
+  justify-content: center;
+  align-content: start;
+  padding: clamp(3rem, 14vh, 8rem) 1.25rem 2rem;
+  box-sizing: border-box;
+  background: Canvas;
+  color: CanvasText;
+}
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1.1;
+}
+p {
+  margin: 0 0 1.5rem;
+}
+#actions:not([hidden]) {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+a {
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid currentColor;
+  color: LinkText;
+  text-underline-offset: 0.2em;
+}
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
