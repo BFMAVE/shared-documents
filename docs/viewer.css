@@ -6,21 +6,39 @@ body {
   min-height: 100svh;
   margin: 0;
   display: grid;
-  grid-template-columns: minmax(0, 32rem);
+  grid-template-columns: minmax(0, 44rem);
   justify-content: center;
   align-content: start;
-  padding: clamp(3rem, 14vh, 8rem) 1.25rem 2rem;
+  padding: clamp(2rem, 9vh, 6rem) 1.25rem 2rem;
   box-sizing: border-box;
   background: Canvas;
   color: CanvasText;
 }
 h1 {
   margin: 0 0 0.75rem;
-  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
   line-height: 1.1;
 }
 p {
   margin: 0 0 1.5rem;
+}
+#status:empty {
+  margin: 0;
+}
+#subtitle {
+  line-height: 1.5;
+}
+#summary {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid GrayText;
+}
+h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+}
+#abstract {
+  line-height: 1.65;
 }
 #actions:not([hidden]) {
   display: flex;

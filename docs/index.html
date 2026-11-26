@@ -7,17 +7,22 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
   <title>Shared PDF</title>
-  <link rel="stylesheet" href="./viewer.css">
-  <script src="./viewer.js" defer></script>
+  <link rel="stylesheet" href="./viewer.css?v=2">
+  <script src="./viewer.js?v=2" defer></script>
 </head>
 <body>
   <main aria-labelledby="heading">
     <h1 id="heading">Shared PDF</h1>
+    <p id="subtitle" hidden></p>
     <p id="status" role="status">Opening the document…</p>
     <div id="actions" hidden>
       <a id="read" target="_blank" rel="noopener noreferrer">Open PDF</a>
       <a id="download" download="document.pdf">Download PDF</a>
     </div>
+    <section id="summary" aria-labelledby="abstract-heading" hidden>
+      <h2 id="abstract-heading">Abstract</h2>
+      <p id="abstract"></p>
+    </section>
     <noscript>Enable JavaScript to unlock the PDF in your browser.</noscript>
   </main>
 </body>
