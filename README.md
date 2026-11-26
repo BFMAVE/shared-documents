@@ -1,16 +1,15 @@
-# Shared documents
+# Dirichlet GRH and the covolume of theta lifts
 
-Use the full sharing link to open the PDF in a browser. The part after `#` unlocks the document.
+A reconstruction of the argument of Alpöge and Claude. The manuscript is dated 26 November 2026 and runs to 460 pages.
 
-## Download without a browser
+[Download the PDF](https://bfmave.github.io/shared-documents/dirichlet-grh.pdf) · [Read the abstract](https://bfmave.github.io/shared-documents/)
 
-The [download script](https://raw.githubusercontent.com/BFMAVE/shared-documents/main/docs/download-pdf.mjs) runs with Node.js 18 or later and requires no GitHub login.
+## Retrieve the PDF through the GitHub connector
 
-```sh
-curl -fsSLO https://raw.githubusercontent.com/BFMAVE/shared-documents/main/docs/download-pdf.mjs
-node download-pdf.mjs 'FULL_SHARING_LINK' document.pdf
-```
+Open [connector/pdf.json](connector/pdf.json) in `BFMAVE/shared-documents`. It lists the parts of the PDF in order and gives the size and SHA-256 of the full file. Each part is under 1 MB.
 
-Replace `FULL_SHARING_LINK` with the complete link you received. Pass `-` in its place to read the link from standard input.
+1. Call the GitHub connector's `fetch_file` for every path in `parts`, with `encoding: "base64"` and the same repository ref for every call.
+2. Base64-decode each response's `content` and concatenate the decoded bytes in the order given by the manifest.
+3. Save the result as `dirichlet-grh.pdf`. The SHA-256 should match the manifest, and `pdfinfo` should report 460 pages.
 
-The script fetches the encrypted file directly from GitHub. Another client can fetch [document.bin](https://raw.githubusercontent.com/BFMAVE/shared-documents/main/docs/document.bin) in one request. Decode the link fragment as a base64url AES-256 key. The first 12 bytes of the file are the nonce, and the last 16 bytes are the authentication tag. Use AES-GCM without additional authenticated data to decrypt the bytes between them.
+When updating [the PDF in this repository](docs/dirichlet-grh.pdf), regenerate the parts and manifest in the same commit.

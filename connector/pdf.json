@@ -1,0 +1,25 @@
+{
+  "file": "docs/dirichlet-grh.pdf",
+  "media_type": "application/pdf",
+  "pages": 460,
+  "bytes": 3089166,
+  "sha256": "67e00fd611186a20d3a105b67cb3fc9d00013ac2c959b6a95261d2319044e6b5",
+  "parts": [
+    {
+      "path": "connector/part-01.bin",
+      "bytes": 772292
+    },
+    {
+      "path": "connector/part-02.bin",
+      "bytes": 772292
+    },
+    {
+      "path": "connector/part-03.bin",
+      "bytes": 772292
+    },
+    {
+      "path": "connector/part-04.bin",
+      "bytes": 772290
+    }
+  ]
+}
