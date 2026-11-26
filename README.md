@@ -1,8 +1,10 @@
 # Dirichlet GRH and the covolume of theta lifts
 
-A reconstruction of the argument of Alpöge and Claude. The manuscript is dated 26 November 2026 and runs to 460 pages.
+This manuscript is a human-readable reconstruction of Levent Alpöge and Claude’s proof of the generalized Riemann hypothesis for Dirichlet *L*-functions. It follows the [Lean formalization](https://github.com/lsernau/grh-lean/tree/72fead102f663d5c7a407964a13dc0cf9d977207/grh) and links proof steps to the corresponding Lean declarations.
 
-[Download the PDF](https://bfmave.github.io/shared-documents/dirichlet-grh.pdf) · [Read the abstract](https://bfmave.github.io/shared-documents/)
+Reconstruction orchestrated by Brecht Verbeken. Drafted and revised by OpenAI Codex (GPT‑6.2 Sol).
+
+The 26 November 2026 edition runs to 460 pages. [Read the manuscript](https://bfmave.github.io/shared-documents/)
 
 ## Retrieve the PDF through the GitHub connector
 
