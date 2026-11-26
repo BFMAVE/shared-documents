@@ -28,7 +28,8 @@ p {
 #subtitle {
   line-height: 1.5;
 }
-#summary {
+#summary,
+#script-download {
   margin-top: 2.25rem;
   padding-top: 1.5rem;
   border-top: 1px solid GrayText;
@@ -45,7 +46,7 @@ h2 {
   gap: 0.75rem;
   flex-wrap: wrap;
 }
-a {
+#actions a {
   padding: 0.7rem 1rem;
   border-radius: 0.4rem;
   border: 1px solid currentColor;
@@ -55,4 +56,14 @@ a {
 a:focus-visible {
   outline: 3px solid currentColor;
   outline-offset: 3px;
+}
+#script-download p {
+  margin-bottom: 0.75rem;
+}
+#script-download pre {
+  margin: 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  border: 1px solid GrayText;
+  border-radius: 0.4rem;
 }

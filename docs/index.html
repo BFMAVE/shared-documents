@@ -7,7 +7,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
   <title>Shared PDF</title>
-  <link rel="stylesheet" href="./viewer.css?v=2">
+  <link rel="stylesheet" href="./viewer.css?v=3">
   <script src="./viewer.js?v=2" defer></script>
 </head>
 <body>
@@ -23,7 +23,13 @@
       <h2 id="abstract-heading">Abstract</h2>
       <p id="abstract"></p>
     </section>
-    <noscript>Enable JavaScript to unlock the PDF in your browser.</noscript>
+    <noscript>Use the commands below when browser JavaScript is disabled.</noscript>
+    <section id="script-download" aria-labelledby="script-download-heading">
+      <h2 id="script-download-heading">Download without a browser</h2>
+      <p>Use the <a href="./download-pdf.mjs" download>download script</a> with Node.js 18 or later and the full sharing link, including the part after <code>#</code>.</p>
+      <pre><code>curl -fsSLO https://bfmave.github.io/shared-documents/download-pdf.mjs
+node download-pdf.mjs 'FULL_SHARING_LINK' document.pdf</code></pre>
+    </section>
   </main>
 </body>
 </html>
